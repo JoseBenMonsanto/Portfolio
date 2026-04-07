@@ -4,41 +4,88 @@
   <meta charset="UTF-8">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
+   <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Jose Benito Monsanto</h1>
-    <p>Aspiring Junior Developer</p>
+  <!-- NAVBAR -->
+  <nav>
+    <h2>Portfolio</h2>
+  <ul class="nav-links">
+    <li><a href="#about"><span>About</span></a></li>
+    <li><a href="#projects"><span>Projects</span></a></li>
+    <li><a href="#contact"><span>Contact</span></a></li>
+  </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1 class="fade-in">Hi, I'm <span>Jose Benito Monsanto</span></h1>
+    <p class="fade-in delay">Aspiring Junior Developer</p>
+
+     <div class="hero-buttons fade-in delay-2">
+      <button onclick="scrollToProjects()">View Projects</button>
+      <a href="https://www.canva.com/design/DAHBGqHNG_o/e6lhs_ROAHhBveagQgumRw/edit" class="btn-outline" target="_blank">Download CV</a>
+  </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am passionate about Information Technology
-    and the role it plays in solving real-world
-    problems through innovation and efficiency. With
-    a strong foundation in computer systems,
-    networking, and software applications, I enjoy
-    working with technology to design, implement,
-    and maintain reliable IT solutions.</p>
+  <!-- ABOUT -->
+  <section id="about" class="container">
+  <div class="project-grid">
+
+  <div class="card fade-in">
+    <h3>Portfolio Website</h3>
+    <p>Modern responsive portfolio using HTML, CSS, JS.</p>
+  </div>
+
   </section>
 
-  <section id="projects">
+  <!-- PROJECTS -->
+  <section id="projects" class="container">
     <h2>Projects</h2>
-    <ul>
-      <li>Portfolio Website</li>
-      <li>Expense Tracker (coming soon)</li>
-      <li>Weather App (coming soon)</li>
-    </ul>
+
+    <div class="project-grid">
+
+      <div class="card fade-in">
+        <h3>Portfolio Website</h3>
+        <p>Modern responsive portfolio using HTML, CSS, JS.</p>
+  </div>
+
+  <div class="card fade-in delay">
+    <h3>Xavier University Property Tracker Management</h3>
+    <p>Track property information on where is the property.</p>
+  </div>
+
+  </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: josebenitomonsanto@gmail.com
-    <br>Phone: 09750862883
-    <br>LinkedIn: <a href="https://www.linkedin.com/in/jose-benito-monsanto-029b35363/">linkedin.com/in/jose-benito-monsanto</a>
-    </p>
-  </section>
+  <!-- CONTACT -->
+<section id="contact">
+  <h2>Get In Touch</h2>
+  <p>If you want to work together or have any opportunity, feel free to reach out.</p>
+
+<div class="contact-card">
+  <div class="contact-item">
+    <p>Email:</p>
+    <a href="mailto:josebenitomonsanto@gmail.com">
+      josebenitomonsanto@gmail.com
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <p>LinkedIn:</p>
+    <a href="https://linkedin.com/in/jose-benito-monsanto">
+      linkedin.com/in/jose-benito-monsanto
+    </a>
+  </div>
+</div>
+</section>
 
   <script src="script.js"></script>
 </body>

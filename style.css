@@ -1,35 +1,242 @@
-body {
-  font-family: Arial, sans-serif;
+/* RESET */
+* {
   margin: 0;
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-  background: #333;
-  color: white;
+/* GLOBAL */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  scroll-behavior: smooth;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+/* LINK STYLE */
+.nav-links a {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+}
+
+/* SMOOTH UNDERLINE ANIMATION */
+.nav-links a span {
+  position: relative;
+}
+
+.nav-links a span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* HOVER EFFECT */
+.nav-links a:hover span::after {
+  width: 100%;
+}
+
+/* ACTIVE LINK */
+.nav-links a.active {
+  color: #38bdf8;
+}
+
+.nav-links a.active span::after {
+  width: 100%;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
   text-align: center;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
 }
 
-section {
-  padding: 2rem;
-  margin: 1rem;
-  background: white;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
+.hero h1 {
+  font-size: 3rem;
 }
 
+.hero span {
+  color: #38bdf8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #38bdf8, #6366f1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  padding: 10px 20px;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 1rem;
+}
+
+/* GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: rgba(2, 6, 23, 0.7);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border: 1px solid #38bdf8;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+.delay {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
 @media (max-width: 600px) {
-  body {
-    font-size: 14px;
+  .hero h1 {
+    font-size: 2rem;
   }
+}
 
-  section {
-    margin: 0.5rem;
-  }
+#contact {
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+/* TITLE */
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* DESCRIPTION */
+#contact p {
+  color: #94a3b8;
+  margin-bottom: 0rem;
+}
+
+/* CONTACT CARD */
+.contact-card {
+  background: rgba(2, 6, 23, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+/* EMAIL LINK */
+.contact-card a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.contact-card p {
+  margin-bottom: 1rem;
+}
+
+.contact-card a {
+  display: block;
+  margin-bottom: 0.5=rem;
+}
+
+.contact-item {
+  margin-bottom: 1.5rem;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-item p {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #94a3b8;
 }
