@@ -12,6 +12,22 @@ body {
   color: #e2e8f0;
   scroll-behavior: smooth;
 }
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+
+  border-radius: 50%; /* circle */
+  border: 3px solid #38bdf8;
+
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+
+  margin-bottom: 1rem;
+
+  transition: transform 0.3s ease;
+}
+
 .nav-links {
   display: flex;
   gap: 30px;
