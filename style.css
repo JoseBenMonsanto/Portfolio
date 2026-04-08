@@ -145,6 +145,11 @@ button {
   gap: 25px;
 }
 
+/* Add space below About Me card */
+#about .card {
+  margin-bottom: 40px;
+}
+
 /* CARD */
 .card {
   background: rgba(2, 6, 23, 0.7);
