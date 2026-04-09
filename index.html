@@ -29,7 +29,7 @@
     <img src="profile.png" alt="Your Name" class="profile-pic">
 
     <h1 class="fade-in">Hi, I'm <span>Jose Benito Monsanto</span></h1>
-    <p class="fade-in delay">Aspiring Junior Developer</p>
+    <p id="typing"></p>
 
      <div class="hero-buttons fade-in delay-2">
       <button onclick="scrollToProjects()">View Projects</button>
@@ -37,62 +37,66 @@
   </div>
   </header>
 
+  <hr class="section-divider">
   <!-- ABOUT -->
   <section id="about" class="container">
-  <div class="project-grid">
-
-  <div class="about-card card fade-in">
-    <h3>About Me</h3>
-    <p>am passionate about Information Technology
-    and the role it plays in solving real-world
-    problems through innovation and efficiency. With
-    a strong foundation in computer systems,
-    networking, and software applications, I enjoy
-    working with technology to design, implement,
-    and maintain reliable IT solutions.</p>
-  </div>
-
+    <div class="about-card card fade-in" style="margin-bottom: 2rem; text-align: center;">
+      <h3>About Me</h3>
+      <p>I am passionate about Information Technology and the role it plays in solving real-world problems through innovation and efficiency. With a strong foundation in computer systems, networking, and software applications, I enjoy working with technology to design, implement, and maintain reliable IT solutions.</p>
+    </div>
   </section>
 
+  <hr class="section-divider">
   <!-- PROJECTS -->
   <section id="projects" class="container">
-    <h2>Projects</h2>
-
+    <h2 style="text-align:center;">Projects</h2>
     <div class="project-grid">
-
-      <div class="card fade-in">
+      <div class="card fade-in project-card">
+        <img src="PortIcon.png" alt="Portfolio Website" class="project-img">
         <h3>Portfolio Website</h3>
         <p>Modern responsive portfolio using HTML, CSS, JS.</p>
-  </div>
-
-  <div class="card fade-in delay">
-    <h3>Xavier University Property Tracker Management</h3>
-    <p>Track property information on where is the property.</p>
-  </div>
-
-  </div>
+        <a href="https://github.com/JoseBenMonsanto/Portfolio" class="btn-project" target="_blank">View Project</a>
+      </div>
+      <div class="card fade-in delay project-card">
+        <img src="iconPropTrack.png" alt="Property Tracker" class="project-img">
+        <h3>Xavier University Property Tracker Management</h3>
+        <p>Track property information on where is the property.</p>
+        <a href="https://docs.google.com/document/d/16DOARbSl3a_9KZEG7iKQ1PTQfBOtVl0zMrkoIUVmp5g/edit?tab=t.0" class="btn-project" target="_blank">View Project</a>
+      </div>
+    </div>
   </section>
 
+  <hr class="section-divider">
   <!-- CONTACT -->
 <section id="contact">
   <h2>Get In Touch</h2>
   <p>If you want to work together or have any opportunity, feel free to reach out.</p>
 
-<div class="contact-card">
-  <div class="contact-item">
-    <p>Email:</p>
-    <a href="mailto:josebenitomonsanto@gmail.com">
-      josebenitomonsanto@gmail.com
-    </a>
+  <div class="contact-card">
+    <form class="contact-form" action="mailto:josebenitomonsanto@gmail.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn-project">Send Message</button>
+    </form>
+    <div class="contact-item">
+      <p>Email:</p>
+      <a href="mailto:josebenitomonsanto@gmail.com">josebenitomonsanto@gmail.com</a>
+    </div>
+    <div class="contact-item">
+      <p>LinkedIn:</p>
+      <a href="https://linkedin.com/in/jose-benito-monsanto">linkedin.com/in/jose-benito-monsanto</a>
+    </div>
   </div>
-
-  <div class="contact-item">
-    <p>LinkedIn:</p>
-    <a href="https://linkedin.com/in/jose-benito-monsanto">
-      linkedin.com/in/jose-benito-monsanto
-    </a>
-  </div>
-</div>
 </section>
 
   <script src="script.js"></script>
